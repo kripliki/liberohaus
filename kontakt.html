@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kontakt — Cihlový Domov</title>
+<title>Kontakt — Liberohaus s.r.o.</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,9 +11,17 @@
 
 <header class="site">
   <nav class="nav">
-    <a href="index.html" class="brand">Cihlový Domov <span>EST. 1995</span></a>
+    <a href="index.html" class="brand">Liberohaus <span>EST. 1995</span></a>
     <ul>
       <li><a href="index.html">Domů</a></li>
+      <li class="has-dropdown">
+        <a href="#">O nás</a>
+        <ul class="dropdown">
+          <li><a href="aktuality.html">Aktuality</a></li>
+          <li><a href="ohlasy.html">Ohlasy</a></li>
+          <li><a href="pozemky-domy-na-prodej.html">Pozemky a domy na prodej</a></li>
+        </ul>
+      </li>
       <li><a href="proc-stavet-s-nami.html">Proč stavět s námi</a></li>
       <li><a href="katalog-domu.html">Katalog domů</a></li>
       <li><a href="realizace.html">Realizace</a></li>
@@ -26,7 +34,7 @@
 <div class="page-head">
   <div class="wrap">
     <div class="breadcrumb"><a href="index.html">Domů</a> / Kontakt</div>
-    <div class="eyebrow">Praha · Brno · Ostrava</div>
+    <div class="eyebrow">Ostrava · Praha · Brno</div>
     <h1>Kontakt</h1>
   </div>
 </div>
@@ -34,25 +42,31 @@
 <section>
   <div class="wrap two-col" style="align-items:flex-start;">
     <div>
+      <h3>Liberohaus s.r.o.</h3>
+      <p class="mono" style="font-size:13px;color:#4a463f;">
+        Poděbradova 3359, 702 00 Ostrava<br>
+        IČ: 29389364 · Krajský soud v Ostravě, oddíl C, vložka 38302
+      </p>
+      <div style="margin:20px 0 28px;">
+        <p><strong>Telefon:</strong> <a href="tel:+420608800019">+420 608 800 019</a></p>
+        <p><strong>E-mail:</strong> <a href="mailto:info@liberohaus.cz">info@liberohaus.cz</a></p>
+      </div>
+
       <h3>Pobočky</h3>
       <div class="reason" style="border-left:1px solid var(--line);border-top:1px solid var(--line);margin-bottom:2px;">
         <div class="num mono">OSTRAVA — CENTRÁLA</div>
-        <h4>LiberoDomov Ostrava</h4>
+        <h4>LiberoHaus Ostrava</h4>
         <p>Poděbradova 3359, 702 00 Ostrava</p>
       </div>
       <div class="reason" style="border-left:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:2px;">
         <div class="num mono">PRAHA</div>
-        <h4>Cihlový Domov Praha</h4>
+        <h4>LiberoPrag Praha</h4>
         <p>Táborská 34, 140 00 Praha 4</p>
       </div>
       <div class="reason" style="border-left:1px solid var(--line);border-bottom:1px solid var(--line);">
         <div class="num mono">BRNO</div>
-        <h4>Cihlový Domov Brno</h4>
+        <h4>LiberoHaus Brno</h4>
         <p>Tuřanka 115, 627 00 Brno-Slatina</p>
-      </div>
-      <div style="margin-top:24px;">
-        <p><strong>Telefon:</strong> <a href="tel:608800019">608 800 019</a></p>
-        <p><strong>E-mail:</strong> <a href="mailto:info@cihlovydomov.cz">info@cihlovydomov.cz</a></p>
       </div>
     </div>
 
@@ -68,22 +82,103 @@
         <div class="row">
           <div style="grid-column:1/-1;"><label>E-mail</label><input type="email" placeholder="jan.novak@email.cz"></div>
         </div>
-        <div class="row">
-          <div style="grid-column:1/-1;">
-            <label>Mám zájem o</label>
-            <select>
-              <option>Výstavbu zděného domu na klíč</option>
-              <option>Individuální projekt a výstavbu</option>
-              <option>Typový zděný dům</option>
-              <option>Projekt rodinného domu</option>
-              <option>Pozemek</option>
-            </select>
-          </div>
+
+        <label>Mám zájem o (vyberte jednu nebo více možností)</label>
+        <div class="check-group">
+          <label><input type="checkbox"> Výstavbu zděného domu na klíč</label>
+          <label><input type="checkbox"> Individuální projekt a výstavbu</label>
+          <label><input type="checkbox"> Výstavbu typového (katalogového) zděného domu</label>
+          <label><input type="checkbox"> Mám vlastní projekt, mám zájem pouze o výstavbu</label>
+          <label><input type="checkbox"> Pouze o projekt domu</label>
+          <label><input type="checkbox"> Pozemek</label>
+          <label><input type="checkbox"> Koupi domu</label>
         </div>
+
         <label>Zpráva</label>
         <textarea placeholder="Popište svůj pozemek a představu o domě…"></textarea>
+
+        <label style="margin-top:18px;">Příloha (max. 5 MB)</label>
+        <input type="file" accept=".pdf,.gif,.png,.jpg,.jpeg,.doc,.docx,.ppt,.pptx,.odt,.rar,.zip">
+        <p class="file-hint">Povolené formáty: pdf, gif, png, jpg, jpeg, doc, docx, ppt, pptx, odt, rar, zip.</p>
+
+        <div class="consent">
+          <label><input type="checkbox" required> Souhlasím se zpracováním osobních údajů dle <a href="ochrana-osobnich-udaju.html">zásad ochrany osobních údajů</a>.</label>
+        </div>
+
         <button type="submit" class="btn btn-primary" style="margin-top:18px;">Odeslat poptávku</button>
       </form>
+    </div>
+  </div>
+</section>
+
+<section class="bg-clay tight">
+  <div class="wrap">
+    <div class="eyebrow">Kontaktní osoby</div>
+    <h2 style="margin-bottom:36px;">Na koho se obrátit</h2>
+    <div class="dept-grid">
+      <div>
+        <h4>Vedení společnosti</h4>
+        <table class="info-table">
+          <tr><th>Jméno</th><th>Telefon</th><th>E-mail</th></tr>
+          <tr>
+            <td>Mgr. Radim Havliček<br><span style="color:#6a6459;font-size:12.5px;">jednatel</span></td>
+            <td><a href="tel:+420608800019">+420 608 800 019</a></td>
+            <td><a href="mailto:havlicek@liberohaus.cz">havlicek@liberohaus.cz</a></td>
+          </tr>
+        </table>
+
+        <h4>Obchodní oddělení</h4>
+        <table class="info-table">
+          <tr><th>Jméno</th><th>Telefon</th><th>E-mail</th></tr>
+          <tr>
+            <td>Mgr. Veronika Havličková<br><span style="color:#6a6459;font-size:12.5px;">vedoucí obchodního oddělení</span></td>
+            <td><a href="tel:+420608555795">+420 608 555 795</a></td>
+            <td><a href="mailto:havlickova@liberohaus.cz">havlickova@liberohaus.cz</a></td>
+          </tr>
+        </table>
+
+        <h4>Design a architektura</h4>
+        <table class="info-table">
+          <tr><th>Jméno</th><th>Telefon</th><th>E-mail</th></tr>
+          <tr>
+            <td>Ing. Arch. Josef Řezníček<br><span style="color:#6a6459;font-size:12.5px;">hlavní architekt</span></td>
+            <td>—</td>
+            <td><a href="mailto:reznicek@liberohaus.cz">reznicek@liberohaus.cz</a></td>
+          </tr>
+        </table>
+      </div>
+
+      <div>
+        <h4>Výroba, projekce</h4>
+        <table class="info-table">
+          <tr><th>Jméno</th><th>Telefon</th><th>E-mail</th></tr>
+          <tr>
+            <td>Ing. Radim Žvak<br><span style="color:#6a6459;font-size:12.5px;">hlavní projektant</span></td>
+            <td>—</td>
+            <td><a href="mailto:zvak@liberohaus.cz">zvak@liberohaus.cz</a></td>
+          </tr>
+          <tr>
+            <td>Mgr. Vlastimil Lacko<br><span style="color:#6a6459;font-size:12.5px;">technologie</span></td>
+            <td>—</td>
+            <td><a href="mailto:lacko@liberohaus.cz">lacko@liberohaus.cz</a></td>
+          </tr>
+          <tr>
+            <td>Ing. Petr Kus<br><span style="color:#6a6459;font-size:12.5px;">hlavní stavbyvedoucí</span></td>
+            <td>—</td>
+            <td><a href="mailto:kus@liberohaus.cz">kus@liberohaus.cz</a></td>
+          </tr>
+        </table>
+
+        <h4>Hypotéky, financování</h4>
+        <table class="info-table">
+          <tr><th>Jméno</th><th>Telefon</th><th>E-mail</th></tr>
+          <tr>
+            <td>Václav Pustějovský<br><span style="color:#6a6459;font-size:12.5px;">hypoteční specialista</span></td>
+            <td>—</td>
+            <td><a href="mailto:pustejovsky@liberohaus.cz">pustejovsky@liberohaus.cz</a></td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 </section>
@@ -92,8 +187,8 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand">Cihlový Domov</div>
-        <p style="max-width:260px;">Zděné rodinné domy na klíč od studie po kolaudaci. Praha · Brno · Ostrava.</p>
+        <div class="footer-brand">Liberohaus</div>
+        <p style="max-width:260px;">Zděné rodinné domy na klíč od studie po kolaudaci. Ostrava · Praha · Brno.</p>
       </div>
       <div>
         <h4>Navigace</h4>
@@ -101,24 +196,27 @@
           <li><a href="katalog-domu.html">Katalog domů</a></li>
           <li><a href="realizace.html">Realizace</a></li>
           <li><a href="proc-stavet-s-nami.html">Proč stavět s námi</a></li>
+          <li><a href="ohlasy.html">Ohlasy</a></li>
+          <li><a href="aktuality.html">Aktuality</a></li>
+          <li><a href="pozemky-domy-na-prodej.html">Pozemky a domy na prodej</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </div>
       <div>
         <h4>Kontakt</h4>
         <ul>
-          <li><a href="tel:608800019">608 800 019</a></li>
-          <li><a href="mailto:info@cihlovydomov.cz">info@cihlovydomov.cz</a></li>
+          <li><a href="tel:+420608800019">608 800 019</a></li>
+          <li><a href="mailto:info@liberohaus.cz">info@liberohaus.cz</a></li>
         </ul>
       </div>
       <div>
         <h4>Pobočky</h4>
-        <ul><li>Praha</li><li>Brno</li><li>Ostrava</li></ul>
+        <ul><li>Ostrava</li><li>Praha</li><li>Brno</li></ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Cihlový Domov s.r.o. — ukázkový redesign, placeholder obsah</span>
-      <span>Fotografie: ilustrační (Lorem Picsum)</span>
+      <span>© 2026 Liberohaus s.r.o. · IČ 29389364</span>
+      <span><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></span>
     </div>
   </div>
 </footer>
