@@ -137,24 +137,23 @@ header.site{
 .nav ul a:hover::after, .nav ul a.active::after{width:100%;}
 .nav ul a.active{color:var(--brick);}
 
-/* ---------- nav dropdown (O nás) ---------- */
-.has-dropdown{position:relative;}
-.has-dropdown > a::before{
-  content:"▾";display:inline-block;margin-left:5px;font-size:10px;
-  transform:translateY(-1px);
+/* ---------- sub nav (O nás) — always-visible second row ---------- */
+.subnav{
+  background:var(--clay);
+  border-top:1px solid var(--line);
 }
-.dropdown{
-  list-style:none;margin:0;padding:8px 0;display:none;flex-direction:column;
-  position:absolute;top:100%;left:0;min-width:240px;
-  background:var(--white);border:1px solid var(--line);
-  box-shadow:0 12px 24px rgba(33,31,28,.12);z-index:60;
+.subnav ul{
+  list-style:none;display:flex;flex-wrap:wrap;gap:22px;
+  max-width:var(--max);margin:0 auto;padding:9px 32px;
+  font-size:13.5px;font-weight:500;
 }
-.has-dropdown:hover .dropdown,
-.has-dropdown:focus-within .dropdown{display:flex;}
-.dropdown li{width:100%;}
-.dropdown a{display:block;padding:9px 20px;white-space:nowrap;}
-.dropdown a::after{content:none;}
-.dropdown a:hover{background:var(--clay);color:var(--brick-dark);}
+.subnav a{position:relative;display:inline-block;padding:3px 0;color:var(--forest);}
+.subnav a::after{
+  content:"";position:absolute;left:0;bottom:-3px;width:0;height:1.5px;
+  background:var(--brick);transition:width .25s ease;
+}
+.subnav a:hover::after,.subnav a.active::after{width:100%;}
+.subnav a.active{color:var(--brick-dark);}
 .nav-cta{
   background:var(--brick);color:var(--white);
   padding:10px 20px;border-radius:2px;font-size:13.5px;font-weight:600;
@@ -168,6 +167,7 @@ header.site{
 @media (max-width:860px){
   .nav ul{display:none;}
   .nav-cta{display:none;}
+  .subnav{display:none;}
 }
 
 /* ===================== HERO ===================== */
