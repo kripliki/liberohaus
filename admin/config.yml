@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: kripliki/liberohaus
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "house-grid"
+    label: "Katalog domů (house grid)"
+    label_singular: "Dům"
+    description: "Domy zobrazené v katalogu na katalog-domu.html"
+    folder: "_houses"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - {label: "Pořadí v katalogu", name: "order", widget: "number", valueType: "int"}
+      - {label: "Název domu", name: "title", widget: "string"}
+      - {label: "Podtitul", name: "tagline", widget: "string"}
+      - {label: "Fotografie", name: "image", widget: "image"}
+      - {label: "Popisek fotografie (alt)", name: "image_alt", widget: "string"}
+      - {label: "Dispozice", name: "dispozice", widget: "string"}
+      - {label: "Zastavěná plocha", name: "zastavena_plocha", widget: "string"}
+      - {label: "Podlahová plocha", name: "podlahova_plocha", widget: "string"}
+      - {label: "Text tlačítka", name: "cta_text", widget: "string", default: "Nezávazná poptávka"}
+      - {label: "Odkaz tlačítka", name: "cta_url", widget: "string", default: "kontakt.html"}

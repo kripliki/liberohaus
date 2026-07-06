@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -42,151 +44,20 @@
 <section>
   <div class="wrap">
     <div class="house-grid">
-
+      {% assign houses = site.houses | sort: "order" %}
+      {% for house in houses %}
       <div class="house-card">
-        <div class="house-photo"><img src="https://picsum.photos/seed/dum-libero/800/600" alt="Rodinný dům Libero"></div>
+        <div class="house-photo"><img src="{{ house.image }}" alt="{{ house.image_alt }}"></div>
         <div class="house-body">
-          <h3>Libero</h3>
-          <p class="tagline">Bungalov pro čtyřčlennou rodinu</p>
-          <div class="spec-line"><span>Dispozice</span><span>4+1+1</span></div>
-          <div class="spec-line"><span>Zastavěná plocha</span><span>151 m²</span></div>
-          <div class="spec-line"><span>Podlahová plocha</span><span>130 m²</span></div>
-          <a href="dum-libero.html" class="btn btn-primary">Detail domu</a>
+          <h3>{{ house.title }}</h3>
+          <p class="tagline">{{ house.tagline }}</p>
+          <div class="spec-line"><span>Dispozice</span><span>{{ house.dispozice }}</span></div>
+          <div class="spec-line"><span>Zastavěná plocha</span><span>{{ house.zastavena_plocha }}</span></div>
+          <div class="spec-line"><span>Podlahová plocha</span><span>{{ house.podlahova_plocha }}</span></div>
+          <a href="{{ house.cta_url }}" class="btn btn-primary">{{ house.cta_text }}</a>
         </div>
       </div>
-
-      <div class="house-card">
-        <div class="house-photo"><img src="https://picsum.photos/seed/dum-trento/800/600" alt="Rodinný dům Trento"></div>
-        <div class="house-body">
-          <h3>Trento</h3>
-          <p class="tagline">Patrový dům s prostornou garáží</p>
-          <div class="spec-line"><span>Dispozice</span><span>4+1+1</span></div>
-          <div class="spec-line"><span>Zastavěná plocha</span><span>160 m²</span></div>
-          <div class="spec-line"><span>Podlahová plocha</span><span>128 m²</span></div>
-          <a href="kontakt.html" class="btn btn-primary">Nezávazná poptávka</a>
-        </div>
-      </div>
-
-      <div class="house-card">
-        <div class="house-photo"><img src="https://picsum.photos/seed/dum-vito/800/600" alt="Rodinný dům Vito"></div>
-        <div class="house-body">
-          <h3>Vito</h3>
-          <p class="tagline">Kompaktní bungalov pro menší pozemek</p>
-          <div class="spec-line"><span>Dispozice</span><span>4+1+1</span></div>
-          <div class="spec-line"><span>Zastavěná plocha</span><span>132 m²</span></div>
-          <div class="spec-line"><span>Podlahová plocha</span><span>104 m²</span></div>
-          <a href="kontakt.html" class="btn btn-primary">Nezávazná poptávka</a>
-        </div>
-      </div>
-
-      <div class="house-card">
-        <div class="house-photo"><img src="https://picsum.photos/seed/dum-venus/800/600" alt="Rodinný dům Venus"></div>
-        <div class="house-body">
-          <h3>Venus</h3>
-          <p class="tagline">Bungalov s dvojgaráží pro náročnější rodinu</p>
-          <div class="spec-line"><span>Dispozice</span><span>4+1+2</span></div>
-          <div class="spec-line"><span>Zastavěná plocha</span><span>167 m²</span></div>
-          <div class="spec-line"><span>Podlahová plocha</span><span>134 m²</span></div>
-          <a href="kontakt.html" class="btn btn-primary">Nezávazná poptávka</a>
-        </div>
-      </div>
-
-      <div class="house-card">
-        <div class="house-photo"><img src="https://picsum.photos/seed/dum-pluto/800/600" alt="Rodinný dům Pluto"></div>
-        <div class="house-body">
-          <h3>Pluto</h3>
-          <p class="tagline">Vyvážený bungalov s jednoduchým provozem</p>
-          <div class="spec-line"><span>Dispozice</span><span>4+1+1</span></div>
-          <div class="spec-line"><span>Zastavěná plocha</span><span>147 m²</span></div>
-          <div class="spec-line"><span>Podlahová plocha</span><span>120 m²</span></div>
-          <a href="kontakt.html" class="btn btn-primary">Nezávazná poptávka</a>
-        </div>
-      </div>
-
-      <div class="house-card">
-        <div class="house-photo"><img src="https://picsum.photos/seed/dum-reno/800/600" alt="Rodinný dům Reno"></div>
-        <div class="house-body">
-          <h3>Reno</h3>
-          <p class="tagline">Úsporný bungalov s jednoduchou dispozicí</p>
-          <div class="spec-line"><span>Dispozice</span><span>4+1+1</span></div>
-          <div class="spec-line"><span>Zastavěná plocha</span><span>146 m²</span></div>
-          <div class="spec-line"><span>Podlahová plocha</span><span>117 m²</span></div>
-          <a href="kontakt.html" class="btn btn-primary">Nezávazná poptávka</a>
-        </div>
-      </div>
-
-      <div class="house-card">
-        <div class="house-photo"><img src="https://picsum.photos/seed/dum-dynamik/800/600" alt="Rodinný dům Dynamik"></div>
-        <div class="house-body">
-          <h3>Dynamik</h3>
-          <p class="tagline">Patrový dům pro pětičlennou rodinu</p>
-          <div class="spec-line"><span>Dispozice</span><span>5+1+1</span></div>
-          <div class="spec-line"><span>Zastavěná plocha</span><span>97 m²</span></div>
-          <div class="spec-line"><span>Podlahová plocha</span><span>145 m²</span></div>
-          <a href="kontakt.html" class="btn btn-primary">Nezávazná poptávka</a>
-        </div>
-      </div>
-
-      <div class="house-card">
-        <div class="house-photo"><img src="https://picsum.photos/seed/dum-vespa/800/600" alt="Rodinný dům Vespa"></div>
-        <div class="house-body">
-          <h3>Vespa</h3>
-          <p class="tagline">Prostorný bungalov s pěti pokoji</p>
-          <div class="spec-line"><span>Dispozice</span><span>5+1+1</span></div>
-          <div class="spec-line"><span>Zastavěná plocha</span><span>176 m²</span></div>
-          <div class="spec-line"><span>Podlahová plocha</span><span>152 m²</span></div>
-          <a href="kontakt.html" class="btn btn-primary">Nezávazná poptávka</a>
-        </div>
-      </div>
-
-      <div class="house-card">
-        <div class="house-photo"><img src="https://picsum.photos/seed/dum-vega/800/600" alt="Rodinný dům Vega"></div>
-        <div class="house-body">
-          <h3>Vega</h3>
-          <p class="tagline">Patrový dům s ložnicovým patrem</p>
-          <div class="spec-line"><span>Dispozice</span><span>5+1+2</span></div>
-          <div class="spec-line"><span>Zastavěná plocha</span><span>171 m²</span></div>
-          <div class="spec-line"><span>Podlahová plocha</span><span>138 m²</span></div>
-          <a href="kontakt.html" class="btn btn-primary">Nezávazná poptávka</a>
-        </div>
-      </div>
-
-      <div class="house-card">
-        <div class="house-photo"><img src="https://picsum.photos/seed/dum-lexus/800/600" alt="Rodinný dům Lexus"></div>
-        <div class="house-body">
-          <h3>Lexus</h3>
-          <p class="tagline">Patrový dům s velkoformátovým prosklením</p>
-          <div class="spec-line"><span>Dispozice</span><span>5+1+1</span></div>
-          <div class="spec-line"><span>Zastavěná plocha</span><span>100 m²</span></div>
-          <div class="spec-line"><span>Podlahová plocha</span><span>150 m²</span></div>
-          <a href="kontakt.html" class="btn btn-primary">Nezávazná poptávka</a>
-        </div>
-      </div>
-
-      <div class="house-card">
-        <div class="house-photo"><img src="https://picsum.photos/seed/dum-premier/800/600" alt="Rodinný dům Premier"></div>
-        <div class="house-body">
-          <h3>Premier</h3>
-          <p class="tagline">Kompaktní patrový dům pro menší pozemek</p>
-          <div class="spec-line"><span>Dispozice</span><span>5+1+1</span></div>
-          <div class="spec-line"><span>Zastavěná plocha</span><span>82 m²</span></div>
-          <div class="spec-line"><span>Podlahová plocha</span><span>123 m²</span></div>
-          <a href="kontakt.html" class="btn btn-primary">Nezávazná poptávka</a>
-        </div>
-      </div>
-
-      <div class="house-card">
-        <div class="house-photo"><img src="https://picsum.photos/seed/dum-individual/800/600" alt="Individuální projekt domu"></div>
-        <div class="house-body">
-          <h3>Individuální domy</h3>
-          <p class="tagline">Dům navržený zcela na míru pozemku</p>
-          <div class="spec-line"><span>Dispozice</span><span>dle přání</span></div>
-          <div class="spec-line"><span>Zastavěná plocha</span><span>dle přání</span></div>
-          <div class="spec-line"><span>Podlahová plocha</span><span>dle přání</span></div>
-          <a href="kontakt.html" class="btn btn-primary">Poptat konzultaci</a>
-        </div>
-      </div>
-
+      {% endfor %}
     </div>
   </div>
 </section>
