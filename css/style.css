@@ -1,21 +1,22 @@
 /* ===================================================================
    CIHLOVÝ DOMOV — design tokens
-   Palette:  charcoal #211F1C · paper #F6F2EA · brick #A8462F
-             clay #E4D3B8 · forest #3F4F3D · line #CABB9D
+   Palette:  charcoal #211F1C · paper #F5F2EC · brick #6B4A30
+             clay #DED7C8 · slate #55524A · line #C9C3B5
    Type:     Fraunces (display) / Work Sans (body) / IBM Plex Mono (spec)
    Signature: blueprint corner-ticks + mono dimension labels on every
               photo and spec panel — the site reads like an annotated
               architectural drawing rather than a marketing brochure.
+              Grey/brown tones keep it technical rather than decorative.
 =================================================================== */
 
 :root{
   --charcoal:#211f1c;
-  --paper:#f6f2ea;
-  --brick:#a8462f;
-  --brick-dark:#853724;
-  --clay:#e4d3b8;
-  --forest:#3f4f3d;
-  --line:#cabb9d;
+  --paper:#f5f2ec;
+  --brick:#6b4a30;
+  --brick-dark:#4f3620;
+  --clay:#ded7c8;
+  --forest:#55524a;
+  --line:#c9c3b5;
   --white:#fffdf9;
 
   --display: "Fraunces", "Iowan Old Style", serif;
@@ -192,7 +193,7 @@ section.tight{padding:56px 0;}
 }
 .section-head h2{font-size:clamp(26px,3vw,36px);max-width:600px;}
 .bg-charcoal{background:var(--charcoal);color:var(--paper);}
-.bg-charcoal .eyebrow{color:#e0a48f;}
+.bg-charcoal .eyebrow{color:#c2a583;}
 .bg-clay{background:var(--clay);}
 
 /* ---------- reasons list (numbered, meaningful order = build phases) --- */
