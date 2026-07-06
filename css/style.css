@@ -128,6 +128,7 @@ header.site{
   list-style:none;display:flex;gap:30px;margin:0;padding:0;
   font-size:14.5px;font-weight:500;
 }
+.nav > ul > li{display:flex;align-items:center;}
 .nav ul a{position:relative;padding:4px 0;}
 .nav ul a::after{
   content:"";position:absolute;left:0;bottom:-3px;width:0;height:1.5px;
@@ -135,6 +136,25 @@ header.site{
 }
 .nav ul a:hover::after, .nav ul a.active::after{width:100%;}
 .nav ul a.active{color:var(--brick);}
+
+/* ---------- nav dropdown (O nás) ---------- */
+.has-dropdown{position:relative;}
+.has-dropdown > a::before{
+  content:"▾";display:inline-block;margin-left:5px;font-size:10px;
+  transform:translateY(-1px);
+}
+.dropdown{
+  list-style:none;margin:0;padding:8px 0;display:none;flex-direction:column;
+  position:absolute;top:100%;left:0;min-width:240px;
+  background:var(--white);border:1px solid var(--line);
+  box-shadow:0 12px 24px rgba(33,31,28,.12);z-index:60;
+}
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown{display:flex;}
+.dropdown li{width:100%;}
+.dropdown a{display:block;padding:9px 20px;white-space:nowrap;}
+.dropdown a::after{content:none;}
+.dropdown a:hover{background:var(--clay);color:var(--brick-dark);}
 .nav-cta{
   background:var(--brick);color:var(--white);
   padding:10px 20px;border-radius:2px;font-size:13.5px;font-weight:600;
@@ -274,6 +294,25 @@ form input, form textarea, form select{
 form textarea{min-height:110px;resize:vertical;}
 form input::placeholder, form textarea::placeholder{color:#8a8578;}
 @media (max-width:680px){form .row{grid-template-columns:1fr;} .form-panel{padding:32px 24px;}}
+
+.check-group{display:flex;flex-direction:column;gap:10px;margin-bottom:18px;}
+.check-group label, .consent label{
+  display:flex;align-items:flex-start;gap:10px;
+  font-family:var(--body);font-size:14px;text-transform:none;letter-spacing:normal;
+  color:var(--paper);margin-bottom:0;
+}
+.check-group input, .consent input{width:auto;margin-top:3px;accent-color:var(--brick);}
+.consent{margin-top:14px;font-size:12.5px;}
+.consent a{color:var(--clay);text-decoration:underline;}
+form .file-hint{font-size:12px;color:#8a8578;margin-top:6px;}
+
+/* ---------- info table (kontakt page) ---------- */
+.info-table{width:100%;border-collapse:collapse;margin:0 0 32px;font-size:14px;}
+.info-table th, .info-table td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);}
+.info-table th{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#6a6459;font-weight:500;}
+.info-table td a{color:var(--brick);}
+.dept-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;}
+@media (max-width:760px){.dept-grid{grid-template-columns:1fr;}}
 
 /* ---------- footer ---------- */
 footer.site{background:var(--charcoal);color:#cbc6b9;padding:56px 0 26px;}

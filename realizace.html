@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Realizace — Cihlový Domov</title>
+<title>Realizace — Liberohaus s.r.o.</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,9 +11,17 @@
 
 <header class="site">
   <nav class="nav">
-    <a href="index.html" class="brand">Cihlový Domov <span>EST. 1995</span></a>
+    <a href="index.html" class="brand">Liberohaus <span>EST. 1995</span></a>
     <ul>
       <li><a href="index.html">Domů</a></li>
+      <li class="has-dropdown">
+        <a href="#">O nás</a>
+        <ul class="dropdown">
+          <li><a href="aktuality.html">Aktuality</a></li>
+          <li><a href="ohlasy.html">Ohlasy</a></li>
+          <li><a href="pozemky-domy-na-prodej.html">Pozemky a domy na prodej</a></li>
+        </ul>
+      </li>
       <li><a href="proc-stavet-s-nami.html">Proč stavět s námi</a></li>
       <li><a href="katalog-domu.html">Katalog domů</a></li>
       <li><a href="realizace.html" class="active">Realizace</a></li>
@@ -34,44 +42,142 @@
 
 <section>
   <div class="wrap">
-    <div class="gallery">
-      <figure class="blueprint dark"><span class="tick-bl"></span><span class="tick-br"></span>
-        <img src="https://picsum.photos/seed/real-01/700/560" alt="Realizace bungalovu na míru ve Frýdku-Místku">
-        <figcaption>Bungalov na míru · Frýdek-Místek</figcaption>
-      </figure>
-      <figure class="blueprint dark"><span class="tick-bl"></span><span class="tick-br"></span>
-        <img src="https://picsum.photos/seed/real-02/700/560" alt="Realizace rodinného domu Nova v Havířově">
-        <figcaption>Rodinný dům Nova · Havířov</figcaption>
-      </figure>
-      <figure class="blueprint dark"><span class="tick-bl"></span><span class="tick-br"></span>
-        <img src="https://picsum.photos/seed/real-03/700/560" alt="Realizace rodinného domu Vito v Ostravě">
-        <figcaption>Rodinný dům Vito · Ostrava</figcaption>
-      </figure>
-      <figure class="blueprint dark"><span class="tick-bl"></span><span class="tick-br"></span>
-        <img src="https://picsum.photos/seed/real-04/700/560" alt="Realizace patrového domu v Brně">
-        <figcaption>Patrový dům Orion · Brno</figcaption>
-      </figure>
-      <figure class="blueprint dark"><span class="tick-bl"></span><span class="tick-br"></span>
-        <img src="https://picsum.photos/seed/real-05/700/560" alt="Realizace domu s velkoformátovým prosklením">
-        <figcaption>Dům Lumen · Praha-východ</figcaption>
-      </figure>
-      <figure class="blueprint dark"><span class="tick-bl"></span><span class="tick-br"></span>
-        <img src="https://picsum.photos/seed/real-06/700/560" alt="Realizace individuálního projektu domu">
-        <figcaption>Individuální projekt · Zlín</figcaption>
-      </figure>
-      <figure class="blueprint dark"><span class="tick-bl"></span><span class="tick-br"></span>
-        <img src="https://picsum.photos/seed/real-07/700/560" alt="Realizace rodinného domu s garáží">
-        <figcaption>Rodinný dům Atlas · Opava</figcaption>
-      </figure>
-      <figure class="blueprint dark"><span class="tick-bl"></span><span class="tick-br"></span>
-        <img src="https://picsum.photos/seed/real-08/700/560" alt="Realizace rodinného domu Vega">
-        <figcaption>Rodinný dům Vega · Kroměříž</figcaption>
-      </figure>
-      <figure class="blueprint dark"><span class="tick-bl"></span><span class="tick-br"></span>
-        <img src="https://picsum.photos/seed/real-09/700/560" alt="Realizace exteriéru domu se zahradou">
-        <figcaption>Rodinný dům Tereza · Nový Jičín</figcaption>
-      </figure>
+    <div class="house-grid">
+
+      <div class="house-card">
+        <div class="house-photo"><img src="https://picsum.photos/seed/real-01/800/600" alt="Realizace bungalovu na míru"></div>
+        <div class="house-body">
+          <h3>Bungalov na míru</h3>
+          <div class="spec-line"><span>Dispozice</span><span>4+1+1</span></div>
+          <div class="spec-line"><span>Zastavěná plocha</span><span>145 m²</span></div>
+          <div class="spec-line"><span>Podlahová plocha</span><span>130 m²</span></div>
+          <a href="kontakt.html" class="btn btn-primary">Detail</a>
+        </div>
+      </div>
+
+      <div class="house-card">
+        <div class="house-photo"><img src="https://picsum.photos/seed/real-02/800/600" alt="Realizace rodinného domu Nova R"></div>
+        <div class="house-body">
+          <h3>Rodinný dům Nova R</h3>
+          <div class="spec-line"><span>Dispozice</span><span>5+2+2G</span></div>
+          <div class="spec-line"><span>Zastavěná plocha</span><span>200 m²</span></div>
+          <div class="spec-line"><span>Podlahová plocha</span><span>260 m²</span></div>
+          <a href="kontakt.html" class="btn btn-primary">Detail</a>
+        </div>
+      </div>
+
+      <div class="house-card">
+        <div class="house-photo"><img src="https://picsum.photos/seed/real-03/800/600" alt="Realizace rodinného domu Vito"></div>
+        <div class="house-body">
+          <h3>Rodinný dům Vito</h3>
+          <div class="spec-line"><span>Dispozice</span><span>4+1+1</span></div>
+          <div class="spec-line"><span>Zastavěná plocha</span><span>125 m²</span></div>
+          <div class="spec-line"><span>Podlahová plocha</span><span>100 m²</span></div>
+          <a href="kontakt.html" class="btn btn-primary">Detail</a>
+        </div>
+      </div>
+
+      <div class="house-card">
+        <div class="house-photo"><img src="https://picsum.photos/seed/real-04/800/600" alt="Realizace bungalovu v Pohořelicích"></div>
+        <div class="house-body">
+          <h3>Bungalov Pohořelice</h3>
+          <div class="spec-line"><span>Dispozice</span><span>4+1+1</span></div>
+          <div class="spec-line"><span>Zastavěná plocha</span><span>200 m²</span></div>
+          <div class="spec-line"><span>Podlahová plocha</span><span>163 m²</span></div>
+          <a href="kontakt.html" class="btn btn-primary">Detail</a>
+        </div>
+      </div>
+
+      <div class="house-card">
+        <div class="house-photo"><img src="https://picsum.photos/seed/real-05/800/600" alt="Realizace bungalovu Vito"></div>
+        <div class="house-body">
+          <h3>Bungalov Vito</h3>
+          <div class="spec-line"><span>Dispozice</span><span>4+1+1</span></div>
+          <div class="spec-line"><span>Zastavěná plocha</span><span>123 m²</span></div>
+          <div class="spec-line"><span>Podlahová plocha</span><span>100 m²</span></div>
+          <a href="kontakt.html" class="btn btn-primary">Detail</a>
+        </div>
+      </div>
+
+      <div class="house-card">
+        <div class="house-photo"><img src="https://picsum.photos/seed/real-06/800/600" alt="Realizace rodinného domu v Horních Jirčanech"></div>
+        <div class="house-body">
+          <h3>Rodinný dům Horní Jirčany</h3>
+          <div class="spec-line"><span>Dispozice</span><span>6+1+1</span></div>
+          <div class="spec-line"><span>Zastavěná plocha</span><span>120 m²</span></div>
+          <div class="spec-line"><span>Podlahová plocha</span><span>220 m²</span></div>
+          <a href="kontakt.html" class="btn btn-primary">Detail</a>
+        </div>
+      </div>
+
+      <div class="house-card">
+        <div class="house-photo"><img src="https://picsum.photos/seed/real-07/800/600" alt="Realizace rodinného domu Libero"></div>
+        <div class="house-body">
+          <h3>Rodinný dům Libero</h3>
+          <div class="spec-line"><span>Dispozice</span><span>4+1+1</span></div>
+          <div class="spec-line"><span>Zastavěná plocha</span><span>145 m²</span></div>
+          <div class="spec-line"><span>Podlahová plocha</span><span>135 m²</span></div>
+          <a href="kontakt.html" class="btn btn-primary">Detail</a>
+        </div>
+      </div>
+
+      <div class="house-card">
+        <div class="house-photo"><img src="https://picsum.photos/seed/real-08/800/600" alt="Realizace bungalovu v Blansku"></div>
+        <div class="house-body">
+          <h3>Bungalov Blansko</h3>
+          <div class="spec-line"><span>Dispozice</span><span>4+1+1</span></div>
+          <div class="spec-line"><span>Zastavěná plocha</span><span>145 m²</span></div>
+          <div class="spec-line"><span>Podlahová plocha</span><span>135 m²</span></div>
+          <a href="kontakt.html" class="btn btn-primary">Detail</a>
+        </div>
+      </div>
+
+      <div class="house-card">
+        <div class="house-photo"><img src="https://picsum.photos/seed/real-09/800/600" alt="Realizace rodinného domu v Čeladné"></div>
+        <div class="house-body">
+          <h3>Rodinný dům Čeladná</h3>
+          <div class="spec-line"><span>Dispozice</span><span>5+1+1</span></div>
+          <div class="spec-line"><span>Zastavěná plocha</span><span>90 m²</span></div>
+          <div class="spec-line"><span>Podlahová plocha</span><span>160 m²</span></div>
+          <a href="kontakt.html" class="btn btn-primary">Detail</a>
+        </div>
+      </div>
+
+      <div class="house-card">
+        <div class="house-photo"><img src="https://picsum.photos/seed/real-10/800/600" alt="Realizace rodinného domu Premier"></div>
+        <div class="house-body">
+          <h3>Rodinný dům Premier</h3>
+          <div class="spec-line"><span>Dispozice</span><span>5+1+1</span></div>
+          <div class="spec-line"><span>Zastavěná plocha</span><span>77 m²</span></div>
+          <div class="spec-line"><span>Podlahová plocha</span><span>140 m²</span></div>
+          <a href="kontakt.html" class="btn btn-primary">Detail</a>
+        </div>
+      </div>
+
+      <div class="house-card">
+        <div class="house-photo"><img src="https://picsum.photos/seed/real-11/800/600" alt="Realizace dvougeneračního bungalovu"></div>
+        <div class="house-body">
+          <h3>Bungalov 2-generační</h3>
+          <div class="spec-line"><span>Dispozice</span><span>6+1+1</span></div>
+          <div class="spec-line"><span>Zastavěná plocha</span><span>170 m²</span></div>
+          <div class="spec-line"><span>Podlahová plocha</span><span>160 m²</span></div>
+          <a href="kontakt.html" class="btn btn-primary">Detail</a>
+        </div>
+      </div>
+
+      <div class="house-card">
+        <div class="house-photo"><img src="https://picsum.photos/seed/real-12/800/600" alt="Realizace rodinného domu Premier v Haňovicích"></div>
+        <div class="house-body">
+          <h3>Rodinný dům Premier Haňovice</h3>
+          <div class="spec-line"><span>Dispozice</span><span>5+1+1</span></div>
+          <div class="spec-line"><span>Zastavěná plocha</span><span>77 m²</span></div>
+          <div class="spec-line"><span>Podlahová plocha</span><span>140 m²</span></div>
+          <a href="kontakt.html" class="btn btn-primary">Detail</a>
+        </div>
+      </div>
+
     </div>
+    <p class="mono" style="margin-top:28px;font-size:12.5px;color:#6a6459;">Strana 1 z 4 — archiv realizací dále obsahuje desítky dalších předaných staveb.</p>
   </div>
 </section>
 
@@ -87,8 +193,8 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand">Cihlový Domov</div>
-        <p style="max-width:260px;">Zděné rodinné domy na klíč od studie po kolaudaci. Praha · Brno · Ostrava.</p>
+        <div class="footer-brand">Liberohaus</div>
+        <p style="max-width:260px;">Zděné rodinné domy na klíč od studie po kolaudaci. Ostrava · Praha · Brno.</p>
       </div>
       <div>
         <h4>Navigace</h4>
@@ -96,24 +202,27 @@
           <li><a href="katalog-domu.html">Katalog domů</a></li>
           <li><a href="realizace.html">Realizace</a></li>
           <li><a href="proc-stavet-s-nami.html">Proč stavět s námi</a></li>
+          <li><a href="ohlasy.html">Ohlasy</a></li>
+          <li><a href="aktuality.html">Aktuality</a></li>
+          <li><a href="pozemky-domy-na-prodej.html">Pozemky a domy na prodej</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </div>
       <div>
         <h4>Kontakt</h4>
         <ul>
-          <li><a href="tel:608800019">608 800 019</a></li>
-          <li><a href="mailto:info@cihlovydomov.cz">info@cihlovydomov.cz</a></li>
+          <li><a href="tel:+420608800019">608 800 019</a></li>
+          <li><a href="mailto:info@liberohaus.cz">info@liberohaus.cz</a></li>
         </ul>
       </div>
       <div>
         <h4>Pobočky</h4>
-        <ul><li>Praha</li><li>Brno</li><li>Ostrava</li></ul>
+        <ul><li>Ostrava</li><li>Praha</li><li>Brno</li></ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Cihlový Domov s.r.o. — ukázkový redesign, placeholder obsah</span>
-      <span>Fotografie: ilustrační (Lorem Picsum)</span>
+      <span>© 2026 Liberohaus s.r.o. · IČ 29389364</span>
+      <span><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></span>
     </div>
   </div>
 </footer>
