@@ -60,9 +60,21 @@ function renderMessage(status, payload) {
   // JSON.stringify doesn't escape "<", so guard against a crafted error/description
   // (attacker-controlled query params) breaking out of the inline <script> tag.
   const safeMessage = JSON.stringify(message).replace(/</g, "\\u003c")
+  const humanText =
+    status === "success"
+      ? "Signed in. You can close this window."
+      : `Sign-in failed: ${(payload.description || payload.error).replace(/\.*$/, ".")} Close this window and try logging in again.`
+  const htmlEscapedHumanText = humanText.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]))
+  // The human-readable text above is always rendered, so if window.opener is
+  // null (e.g. this callback URL, with its now-single-use code, got reopened
+  // directly from browser history/session restore rather than as the popup
+  // Decap CMS spawns) the user still sees what happened instead of a blank
+  // page from an uncaught "Cannot read properties of null" postMessage throw.
   return `
+<p id="message" style="font-family: sans-serif;">${htmlEscapedHumanText}</p>
 <script>
 (function() {
+  if (!window.opener) return;
   function receiveMessage(e) {
     window.opener.postMessage(${safeMessage}, e.origin);
     window.removeEventListener("message", receiveMessage, false);
