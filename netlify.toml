@@ -1,4 +1,10 @@
 [build]
+  # No build step: this repo is plain static HTML + Liquid templating that
+  # GitHub Pages renders with Jekyll. This Netlify site only exists to host
+  # the OAuth functions below, so publish the files as-is and skip any
+  # build command (a leftover dashboard-configured "jekyll build" command
+  # would otherwise run here and fail, since there's no Gemfile/Jekyll).
+  command = "true"
   publish = "."
   functions = "netlify/functions"
 
