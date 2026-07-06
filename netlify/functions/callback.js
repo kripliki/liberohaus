@@ -88,7 +88,14 @@ function renderMessage(status, payload) {
 function htmlResponse(body) {
   return {
     statusCode: 200,
-    headers: { "Content-Type": "text/html" },
+    // This page's only job is `window.opener.postMessage(...)`. If any layer
+    // in front of this function (CDN, corporate proxy, browser default)
+    // applies a stricter Cross-Origin-Opener-Policy, the browser silently
+    // severs window.opener the moment this cross-origin popup navigates here,
+    // so the postMessage handshake never fires and the popup just sits open.
+    // Being explicit here keeps that opener link alive regardless of what a
+    // consumer's admin page origin (e.g. a GitHub Pages domain) is.
+    headers: { "Content-Type": "text/html", "Cross-Origin-Opener-Policy": "unsafe-none" },
     body: `<!DOCTYPE html><html><head><meta charset="utf-8"></head><body>${body}</body></html>`,
   }
 }
