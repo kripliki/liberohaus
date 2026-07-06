@@ -8,6 +8,9 @@ backend:
   base_url: https://liberohaus.netlify.app
   auth_endpoint: auth
 
+site_url: https://kripliki.github.io/liberohaus
+display_url: https://kripliki.github.io/liberohaus
+
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
