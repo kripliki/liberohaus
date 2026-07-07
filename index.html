@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script src="assets/js/form.js" defer></script>
 </head>
 <body>
 
@@ -207,17 +208,22 @@
           <h2 style="color:var(--paper);">Máte pozemek a představu o domě?</h2>
           <p style="color:#c7c3ba;">Napište nám pár základních informací a ozveme se vám do dvou pracovních dnů s nezávaznou konzultací.</p>
         </div>
-        <form>
-          <div class="row">
-            <div><label>Jméno a příjmení</label><input type="text" placeholder="Jan Novák"></div>
-            <div><label>Telefon</label><input type="tel" placeholder="+420 608 800 019"></div>
+        <form class="ajax-form">
+          <div class="hp-field" aria-hidden="true">
+            <label>Nevyplňujte tohle pole</label>
+            <input type="text" name="company" tabindex="-1" autocomplete="off">
           </div>
           <div class="row">
-            <div style="grid-column:1/-1;"><label>E-mail</label><input type="email" placeholder="jan.novak@email.cz"></div>
+            <div><label>Jméno a příjmení</label><input type="text" name="name" placeholder="Jan Novák" required></div>
+            <div><label>Telefon</label><input type="tel" name="phone" placeholder="+420 608 800 019"></div>
+          </div>
+          <div class="row">
+            <div style="grid-column:1/-1;"><label>E-mail</label><input type="email" name="email" placeholder="jan.novak@email.cz"></div>
           </div>
           <label>Zpráva</label>
-          <textarea placeholder="Popište svůj pozemek a představu o domě…"></textarea>
+          <textarea name="message" placeholder="Popište svůj pozemek a představu o domě…"></textarea>
           <button type="submit" class="btn btn-primary" style="margin-top:18px;">Odeslat poptávku</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
     </div>

@@ -6,6 +6,7 @@
 <title>Kontakt — Liberohaus s.r.o.</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script src="assets/js/form.js" defer></script>
 </head>
 <body>
 
@@ -73,34 +74,39 @@
       <span class="tick-bl"></span><span class="tick-br"></span>
       <div class="eyebrow">Poptávka</div>
       <h2 style="color:var(--paper);">Napište nám</h2>
-      <form>
-        <div class="row">
-          <div><label>Jméno a příjmení</label><input type="text" placeholder="Jan Novák"></div>
-          <div><label>Telefon</label><input type="tel" placeholder="+420 608 800 019"></div>
+      <form class="ajax-form">
+        <div class="hp-field" aria-hidden="true">
+          <label>Nevyplňujte tohle pole</label>
+          <input type="text" name="company" tabindex="-1" autocomplete="off">
         </div>
         <div class="row">
-          <div style="grid-column:1/-1;"><label>E-mail</label><input type="email" placeholder="jan.novak@email.cz"></div>
+          <div><label>Jméno a příjmení</label><input type="text" name="name" placeholder="Jan Novák" required></div>
+          <div><label>Telefon</label><input type="tel" name="phone" placeholder="+420 608 800 019"></div>
+        </div>
+        <div class="row">
+          <div style="grid-column:1/-1;"><label>E-mail</label><input type="email" name="email" placeholder="jan.novak@email.cz"></div>
         </div>
 
         <label>Mám zájem o (vyberte jednu nebo více možností)</label>
         <div class="check-group">
-          <label><input type="checkbox"> Výstavbu zděného domu na klíč</label>
-          <label><input type="checkbox"> Individuální projekt a výstavbu</label>
-          <label><input type="checkbox"> Výstavbu typového (katalogového) zděného domu</label>
-          <label><input type="checkbox"> Mám vlastní projekt, mám zájem pouze o výstavbu</label>
-          <label><input type="checkbox"> Pouze o projekt domu</label>
-          <label><input type="checkbox"> Pozemek</label>
-          <label><input type="checkbox"> Koupi domu</label>
+          <label><input type="checkbox" name="interests" value="Výstavba zděného domu na klíč"> Výstavbu zděného domu na klíč</label>
+          <label><input type="checkbox" name="interests" value="Individuální projekt a výstavba"> Individuální projekt a výstavbu</label>
+          <label><input type="checkbox" name="interests" value="Výstavba typového (katalogového) zděného domu"> Výstavbu typového (katalogového) zděného domu</label>
+          <label><input type="checkbox" name="interests" value="Vlastní projekt, pouze výstavba"> Mám vlastní projekt, mám zájem pouze o výstavbu</label>
+          <label><input type="checkbox" name="interests" value="Pouze projekt domu"> Pouze o projekt domu</label>
+          <label><input type="checkbox" name="interests" value="Pozemek"> Pozemek</label>
+          <label><input type="checkbox" name="interests" value="Koupě domu"> Koupi domu</label>
         </div>
 
         <label>Zpráva</label>
-        <textarea placeholder="Popište svůj pozemek a představu o domě…"></textarea>
+        <textarea name="message" placeholder="Popište svůj pozemek a představu o domě…"></textarea>
 
         <div class="consent">
           <label><input type="checkbox" required> Souhlasím se zpracováním osobních údajů dle <a href="ochrana-osobnich-udaju.html">zásad ochrany osobních údajů</a>.</label>
         </div>
 
         <button type="submit" class="btn btn-primary" style="margin-top:18px;">Odeslat poptávku</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
   </div>
