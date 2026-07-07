@@ -207,16 +207,18 @@
           <h2 style="color:var(--paper);">Máte pozemek a představu o domě?</h2>
           <p style="color:#c7c3ba;">Napište nám pár základních informací a ozveme se vám do dvou pracovních dnů s nezávaznou konzultací.</p>
         </div>
-        <form>
+        <form action="https://formspree.io/f/xvzjydbj" method="POST">
+          <input type="hidden" name="_subject" value="Nová poptávka z webu Liberohaus — Úvodní strana">
+          <input type="text" name="_gotcha" style="display:none">
           <div class="row">
-            <div><label>Jméno a příjmení</label><input type="text" placeholder="Jan Novák"></div>
-            <div><label>Telefon</label><input type="tel" placeholder="+420 608 800 019"></div>
+            <div><label>Jméno a příjmení</label><input type="text" name="name" placeholder="Jan Novák" required></div>
+            <div><label>Telefon</label><input type="tel" name="phone" placeholder="+420 608 800 019"></div>
           </div>
           <div class="row">
-            <div style="grid-column:1/-1;"><label>E-mail</label><input type="email" placeholder="jan.novak@email.cz"></div>
+            <div style="grid-column:1/-1;"><label>E-mail</label><input type="email" name="email" placeholder="jan.novak@email.cz" required></div>
           </div>
           <label>Zpráva</label>
-          <textarea placeholder="Popište svůj pozemek a představu o domě…"></textarea>
+          <textarea name="message" placeholder="Popište svůj pozemek a představu o domě…" required></textarea>
           <button type="submit" class="btn btn-primary" style="margin-top:18px;">Odeslat poptávku</button>
         </form>
       </div>
